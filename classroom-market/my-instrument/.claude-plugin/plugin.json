@@ -1,0 +1,9 @@
+{
+  "name": "my-instrument",
+  "version": "0.1.0",
+  "description": "My personal skill plus my deployed MCP server \u2014 the case my parts travel in",
+  "author": {
+    "name": "YOUR NAME"
+  },
+  "license": "MIT"
+}

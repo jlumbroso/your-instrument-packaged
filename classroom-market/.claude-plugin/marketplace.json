@@ -1,0 +1,11 @@
+{
+  "name": "my-classroom",
+  "owner": { "name": "YOUR NAME" },
+  "plugins": [
+    {
+      "name": "my-instrument",
+      "source": "./my-instrument",
+      "description": "My personal skill plus my deployed MCP server"
+    }
+  ]
+}
