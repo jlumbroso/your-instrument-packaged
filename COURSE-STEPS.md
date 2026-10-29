@@ -43,19 +43,17 @@ is the thing that gets installed. Nothing is nested.
 
 ## 2. Validate (10 seconds)
 
-From the repository folder:
-
 **Save all three files first.** Then, from the repository folder:
 
 ```
 claude plugin validate .
 ```
 
-Green means the shape is right (note: it checks SHAPE — it passes even
+Green means the shape is right; an error names the exact file and field. (Note: it checks SHAPE — it passes even
 with placeholders still in, so eyeball your three edits).
 
 Five-second bonus, same prompt: `claude --plugin-dir . plugin details my-instrument`
-prints what your plugin costs per session in tokens (~59 always-on). An error names the exact file and field.
+prints what your plugin costs per session in tokens (~59 always-on).
 
 ## 3. Load it (the win)
 
@@ -84,7 +82,8 @@ free Render instance waking up; ask again.
 
 ## 5. Your show slide (2 minutes, your Claude does the work)
 
-Still in the same session, say: **"Read show-and-tell/CLAUDE-STEPS.md
+Fill in your four answers inside `show-and-tell/CLAUDE-STEPS.md` (save!),
+then still in the same session say: **"Read show-and-tell/CLAUDE-STEPS.md
 and build this."** Your four show-and-tell answers become a one-page
 slide committed to your repo.
 
