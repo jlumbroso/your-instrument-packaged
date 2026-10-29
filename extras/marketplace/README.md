@@ -10,11 +10,10 @@ the simplest marketplace is **this repository itself**:
 cp extras/marketplace/marketplace.json.example .claude-plugin/marketplace.json
 ```
 
-2. Edit that new file: set `"source": "./"` (this repo IS the plugin).
-3. Register and install:
+2. Register and install (the example already points at `./` — this repo IS the plugin):
 
 ```
-claude plugin marketplace add .
+claude plugin marketplace add ./
 claude plugin install my-instrument@my-classroom
 ```
 

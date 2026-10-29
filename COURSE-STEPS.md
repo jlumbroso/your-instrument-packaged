@@ -21,15 +21,14 @@ is the thing that gets installed. Nothing is nested.
 
 ## 1. Three edits (5 minutes)
 
-1. **`.mcp.json`** — replace the placeholder with YOUR server's URL —
-   and while you're here, **open that URL once in a browser** (or
-   `curl` it): free Render instances nap, take 30–50 s to wake, and
-   Claude Code gives up connecting at 30 s. Wake it now, not at load
-   time. Then:
+1. **`.mcp.json`** — replace the placeholder with YOUR server's URL
    (the Render address from s4, ending in `/mcp`). Keep the
    `"type": "http"` line — without it the entry is silently skipped.
-   Use your no-auth server (time or memory); protected-notes stays
-   connected the way you already have it.
+   Use your no-auth server (time or memory). **While you're here, open
+   that URL once in a browser**: free Render instances nap for 30–50 s
+   and Claude Code stops waiting at 30 s — wake it now, not at load
+   time. (You'll see a "Not Acceptable" JSON message once it's awake —
+   that's normal; a browser isn't an MCP client.)
 2. **`skills/my-ways/SKILL.md`** — replace the placeholder with your s6
    skill: your description in the frontmatter (keep it in "quotes" — a
    bare colon inside breaks YAML), your WHEN/HOW rules in the body.
@@ -53,29 +52,28 @@ claude plugin validate .
 ```
 
 Green means the shape is right (note: it checks SHAPE — it passes even
-with placeholders still in, so eyeball your three edits). An error names the exact file and field.
+with placeholders still in, so eyeball your three edits).
+
+Five-second bonus, same prompt: `claude --plugin-dir . plugin details my-instrument`
+prints what your plugin costs per session in tokens (~59 always-on). An error names the exact file and field.
 
 ## 3. Load it (the win)
 
-**Step OUT of the folder first** — this is the point of the level:
+From the repository folder:
 
 ```
-cd ..
-claude --plugin-dir ./your-instrument-packaged
+claude --plugin-dir .
 ```
-
-(Running from INSIDE the repo makes Claude Code treat the plugin's own
-`.mcp.json` as a project config and suppress the plugin's server — the
-one wrong-feeling prompt of the night. From outside, no prompt, and
-your instrument is proving it works away from its home folder.)
 
 In that session: type `/` — you'll see **`/my-instrument:my-ways`**.
 Run `/mcp` — your server shows as **connected**. (If it shows your OLD
 server name from s4 instead, Claude Code deduplicated the same URL —
 that still counts.) That's the whole level: the parts travel as one.
 
-Five-second bonus: `claude --plugin-dir ./your-instrument-packaged plugin details my-instrument`
-prints what your plugin costs per session in tokens (~59 always-on).
+(Why no scary "new MCP server found" prompt? This template ships a
+3-line `.claude/settings.json` that tells Claude Code the root
+`.mcp.json` belongs to the PLUGIN, not the project — so the plugin's
+server loads cleanly and nothing is double-registered.)
 
 ## 4. Feel the difference (2 minutes)
 
@@ -83,6 +81,12 @@ Ask Claude something your skill covers, without naming your tool.
 Watch it reach — your WHEN rules deciding, your server answering, from
 one installed thing. If the first call stalls ~30 seconds, that's your
 free Render instance waking up; ask again.
+
+## 5. Your show slide (2 minutes, your Claude does the work)
+
+Still in the same session, say: **"Read show-and-tell/CLAUDE-STEPS.md
+and build this."** Your four show-and-tell answers become a one-page
+slide committed to your repo.
 
 ---
 

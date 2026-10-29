@@ -1,10 +1,11 @@
 {
   "name": "my-classroom",
+  "description": "My personal plugin catalog",
   "owner": { "name": "YOUR NAME" },
   "plugins": [
     {
       "name": "my-instrument",
-      "source": "./my-instrument",
+      "source": "./",
       "description": "My personal skill plus my deployed MCP server"
     }
   ]
