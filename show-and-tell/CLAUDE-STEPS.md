@@ -2,8 +2,9 @@
 
 *This is a set of steps written to be handed to Claude. Answer the four
 questions below (one or two honest sentences each — rough edges are the
-point), then paste this whole file into Claude Code or claude.ai and say:
-**"Build this."***
+point), then in Claude Code — already open from the main steps — say:
+**"Read show-and-tell/CLAUDE-STEPS.md and build this."** (Claude Code,
+not the claude.ai website: the website can't write files to your repo.)*
 
 ## My four answers (fill these in first)
 
@@ -38,5 +39,6 @@ this repository:
 - Do not invent content: if an answer above is blank, ask for it instead
   of writing one.
 
-Open it when done (`open show-and-tell/slide.html`) so the author sees it
-immediately.
+Open it when done (`open show-and-tell/slide.html` on macOS;
+`explorer.exe show-and-tell/slide.html` on Windows/WSL; `xdg-open` on
+Linux) so the author sees it immediately.
