@@ -6,6 +6,12 @@ SKILL.md). **s7**: it knows you. This level: **it travels as one** —
 your server and your skill become a single installable thing, a Claude
 Code plugin. One folder, three edits, two commands.*
 
+## Before you start (prerequisites)
+
+You need: **Claude Code installed** (`claude` runs in your terminal), a
+**git clone** of your template copy, your **Render URL** (s4), and your
+**SKILL.md** (s6). Nothing else.
+
 ## 0. Get the folder (1 minute)
 
 Use this template (the green button on GitHub) to make YOUR copy, then
@@ -23,8 +29,10 @@ is the thing that gets installed. Nothing is nested.
    skill: your description line in the frontmatter, your WHEN/HOW rules
    in the body.
 3. **`.claude-plugin/plugin.json`** — put your name in `author`.
-   (Keep the plugin name simple; never start it with `claude-` or
-   `anthropic-` — those are reserved.)
+   **Keep the plugin name `my-instrument` for tonight** — it's what the
+   `/my-instrument:my-ways` command below expects (rename later and the
+   slash command renames with it; never start a name with `claude-` or
+   `anthropic-` — reserved).
 
 ## 2. Validate (10 seconds)
 
